@@ -4,7 +4,7 @@ struct Tile
     int value;    
     bool hasMerged;
     char d = '-';
-} 
+}
 blank{0,0,0,false,dir};
 
 string directions = "LRUD";
@@ -36,8 +36,7 @@ void GetNextPos(int &x, int &y, int i, int j)
 vector<deque<Tile>> GetLines(vector<vector<int>> &grid)
 {
     vector<deque<Tile>> lines;
-    
-    
+        
     for(int i=0; i<4; i++)
     {        
         deque<Tile> line;
@@ -61,7 +60,7 @@ vector<deque<Tile>> GetLines(vector<vector<int>> &grid)
 void SlideTiles(deque<Tile> &line)
 {
     deque<Tile> mergedLine;
-    Tile prev = line.back(), curr;// = line[1];
+    Tile prev = line.back(), curr;
     
     line.pop_back();
     
